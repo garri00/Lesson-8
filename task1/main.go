@@ -17,18 +17,16 @@ package main
 import "fmt"
 
 func main() {
-	// ініціалізуємо масиви
-	arr := []int{3, 4, 4, 3, 6, 3}
+	arr := []int{4, 1, 1, 4, -4, 6, 3, 8, 8, 4, 1}
 	var result []int
 	m := make(map[int]int)
 
-	// За допомогою логіки мап записуємо лише унікальні значення масиву
 	for _, v := range arr {
+
+		if _, ok := m[v]; !ok {
+			result = append(result, v)
+		}
 		m[v] = v
-	}
-	// Переписуємо значення з мап до масиву
-	for _, v := range m {
-		result = append(result, v)
 	}
 
 	fmt.Println(result)
