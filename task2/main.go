@@ -58,7 +58,7 @@ func main() {
 		}
 	}
 
-	result = "max = " + strconv.FormatInt(int64(max), 10) + " min = " + strconv.FormatInt(int64(min), 10)
+	result = strconv.FormatInt(int64(max), 10) + " " + strconv.FormatInt(int64(min), 10)
 	fmt.Println(result)
 
 }
